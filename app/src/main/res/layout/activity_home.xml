@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomPanel">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="300dp">
+
+            <TableRow
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btnMath"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/matematicas">
+                </Button>
+
+
+                <Button
+                    android:id="@+id/btnPhysic"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:text="@string/fisica">
+
+                </Button>
+            </TableRow>
+
+            <TableRow
+                android:gravity="center">
+                <Button
+                    android:id="@+id/btnGeometry"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:layout_marginRight="20dp"
+                    android:text="geometria">
+                </Button>
+
+
+                <Button
+                    android:id="@+id/btnText"
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:text="texto">
+
+                </Button>
+            </TableRow>
+
+        </TableLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomPanel"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/purple_700"
+        android:layout_gravity="fill_horizontal"
+        android:layout_alignParentBottom="true">
+
+        <ImageButton
+            android:id="@+id/btnHelp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="45dp"
+            android:background="@drawable/icon_help" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnHome"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_home"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btnLogout"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="45dp"
+            android:background="@drawable/icon_logout" />
+    </LinearLayout>
+
+</RelativeLayout>
