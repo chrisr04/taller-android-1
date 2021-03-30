@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class ForgotPasswordActivity extends AppCompatActivity implements View.OnClickListener {
 
     int[] validCodes = {797360, 323344, 423231, 232434};
@@ -57,9 +59,7 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
                         Toast.makeText(this, R.string.email_invalid, Toast.LENGTH_SHORT).show();
                         return;
                     }
-
-                    Toast.makeText(this, R.string.code_sended, Toast.LENGTH_SHORT).show();
-
+                    sendCode();
                 }else{
                     Toast.makeText(this, R.string.err_campo_invalido, Toast.LENGTH_SHORT).show();
                 }
@@ -84,6 +84,21 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
                 }
 
                 break;
+        }
+    }
+
+    public void sendCode(){
+        Random rand = new Random();
+        int i = rand.nextInt(4);
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL, new String[]{txtEmail.getText().toString()});
+        email.putExtra(Intent.EXTRA_SUBJECT, "Código de confirmación");
+        email.putExtra(Intent.EXTRA_TEXT, "El codigo de confirmación es: "+ validCodes[i]);
+        email.setType("message/rfc822");
+        try {
+            startActivity(Intent.createChooser(email, "Enviar código desde:"));
+        }catch (android.content.ActivityNotFoundException ex){
+            Toast.makeText(this, "No hay ningun cliente de correo instalado", Toast.LENGTH_SHORT).show();
         }
     }
 
