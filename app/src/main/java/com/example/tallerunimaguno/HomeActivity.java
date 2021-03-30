@@ -1,9 +1,11 @@
 package com.example.tallerunimaguno;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -62,7 +64,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;
             case R.id.btnLogout:
-                logOut();
+                confirmLogout();
+                break;
+            case R.id.btnHelp:
+                showHelpAlert();
                 break;
         }
     }
@@ -77,5 +82,37 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, R.string.se_ha_cerrado_la_sesion, Toast.LENGTH_SHORT).show();
         startActivity(intent);
         this.finish();
+    }
+
+    public void  showHelpAlert(){
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+            .setTitle("Ayuda")
+            .setMessage("APP v1 Realizado por: \nChristian Rodriguez\nJulio Rubio")
+            .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+
+                }
+            })
+            .show();
+    }
+
+    public void  confirmLogout(){
+        AlertDialog alertDialog = new AlertDialog.Builder(this)
+                .setTitle("Cerrar Sesión")
+                .setMessage("¿Deseas cerrar sesión?")
+                .setPositiveButton("Si, salir", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        logOut();
+                    }
+                })
+                .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                })
+                .show();
     }
 }

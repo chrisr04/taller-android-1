@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText textEmail, textPassword;
+    TextView txtForgot;
     CheckBox rememberMe, termsAndConditions;
     Button btnSignIn;
     ArrayList<User> users = new ArrayList<User>();
@@ -36,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         textEmail = (EditText) findViewById(R.id.txtEmail);
         textPassword = (EditText) findViewById(R.id.txtPassword);
         rememberMe = (CheckBox) findViewById(R.id.remember_me);
+        txtForgot = findViewById(R.id.txtForgot);
         termsAndConditions = (CheckBox) findViewById(R.id.terms_and_conditions);
 
         checkCurrentUser();
@@ -47,6 +50,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
         btnSignIn.setOnClickListener(this);
+        txtForgot.setOnClickListener(this);
     }
 
     @Override
@@ -81,9 +85,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     Toast.makeText(this, R.string.err_campo_invalido,Toast.LENGTH_SHORT).show();
                 }
                 break;
-
+            case R.id.txtForgot:
+                    moveToOtherActivity(ForgotPasswordActivity.class);
+                break;
             case R.id.btnRegister:
-
+                moveToOtherActivity(RegisterActivity.class);
                 break;
         }
     }
