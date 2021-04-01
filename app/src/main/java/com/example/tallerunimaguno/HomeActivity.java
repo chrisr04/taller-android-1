@@ -20,6 +20,7 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button matematicas;
+    Button fisica; // A
     ImageButton help, home, logout;
 
     @Override
@@ -27,10 +28,12 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         matematicas = findViewById(R.id.btnMath);
+        fisica = findViewById(R.id.btnPhysic); // A
         help = findViewById(R.id.btnHelp);
         home = findViewById(R.id.btnHome);
         logout = findViewById(R.id.btnLogout);
         matematicas.setOnClickListener(this);
+        fisica.setOnClickListener(this); // A
         help.setOnClickListener(this);
         home.setOnClickListener(this);
         logout.setOnClickListener(this);
@@ -63,6 +66,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 Intent i = new Intent(getApplicationContext(),MatematicasActivity.class);
                 startActivity(i);
                 break;
+            case R.id.btnPhysic: // A
+                Intent j = new Intent(getApplicationContext(),FisicaActivity.class); // A
+                startActivity(j); // A
+                break; // A
             case R.id.btnLogout:
                 confirmLogout();
                 break;
@@ -87,7 +94,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void  showHelpAlert(){
         AlertDialog alertDialog = new AlertDialog.Builder(this)
             .setTitle("Ayuda")
-            .setMessage("APP v1 Realizado por: \nChristian Rodriguez\nJulio Rubio")
+            .setMessage("APP v1 Realizado por: \nChristian Rodriguez\nJulio Rubio\nAlejandro Polo")
             .setPositiveButton("Cerrar", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialogInterface, int i) {

@@ -46,4 +46,19 @@
     <string name="confirm_password">Confirmar contraseña</string>
     <string name="update_password">Reestablecer contraseña</string>
     <string name="password_no_match">Las contraseñas no coinciden</string>
+    <string name="fuerza">FUERZA</string>
+    <string name="velocidad">VELOCIDAD</string>
+    <string name="voltaje">VOLTAJE</string>
+    <string name="borrardatos">BORRAR DATOS</string>
+    <string name="masa">Masa (Kg)</string>
+    <string name="aceleracion">Aceleración (m/s^2)</string>
+    <string name="distancia">Distancia (m)</string>
+    <string name="tiempo">Tiempo (s)</string>
+    <string name="amperaje">Amperaje (I)</string>
+    <string name="resistencia1">Resistencia 1 (Ohm)</string>
+    <string name="nresistencias">Numero de resistencias</string>
+    <string name="resistencia2">Resistencia 2 (Ohm)</string>
+    <string name="resistencia3">Resistencia 3 (Ohm)</string>
+    <string name="doblepunto">:</string>
+    <string name="resistenciasenparalelo">Resistencias en paralelo</string>
 </resources>

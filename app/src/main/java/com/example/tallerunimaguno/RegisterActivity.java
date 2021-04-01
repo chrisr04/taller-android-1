@@ -54,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.txtGenre:
-                genreSpn.performClick();
+                genreSpn.performClick(); // para que cuando se le de a la casilla del editText se ejecute el spinner
                 break;
             case R.id.btnRegister:
 
