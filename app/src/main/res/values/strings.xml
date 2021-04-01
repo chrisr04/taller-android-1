@@ -61,4 +61,13 @@
     <string name="resistencia3">Resistencia 3 (Ohm)</string>
     <string name="doblepunto">:</string>
     <string name="resistenciasenparalelo">Resistencias en paralelo</string>
+    <string name="texto_informativo">Ingrese los 2 puntos del plano cartesiano</string>
+    <string name="textox">Eje X</string>
+    <string name="textoy">Eje Y</string>
+    <string name="calculargeo">Calcular</string>
+    <string-array name="opciones">
+        <item>Cuadrante</item>
+        <item>Pendiente</item>
+        <item>Distancia</item>
+    </string-array>
 </resources>

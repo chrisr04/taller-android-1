@@ -20,6 +20,7 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button matematicas;
+    Button geometria;
     Button fisica; // A
     ImageButton help, home, logout;
 
@@ -29,11 +30,13 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_home);
         matematicas = findViewById(R.id.btnMath);
         fisica = findViewById(R.id.btnPhysic); // A
+        geometria = findViewById(R.id.btnGeometry);
         help = findViewById(R.id.btnHelp);
         home = findViewById(R.id.btnHome);
         logout = findViewById(R.id.btnLogout);
         matematicas.setOnClickListener(this);
         fisica.setOnClickListener(this); // A
+        geometria.setOnClickListener(this);
         help.setOnClickListener(this);
         home.setOnClickListener(this);
         logout.setOnClickListener(this);
@@ -70,6 +73,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 Intent j = new Intent(getApplicationContext(),FisicaActivity.class); // A
                 startActivity(j); // A
                 break; // A
+            case R.id.btnGeometry:
+                Intent k = new Intent(getApplicationContext(),GeometriaActivity.class);
+                startActivity(k);
+                break;
             case R.id.btnLogout:
                 confirmLogout();
                 break;
