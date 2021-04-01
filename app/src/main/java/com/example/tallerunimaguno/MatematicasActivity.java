@@ -46,10 +46,10 @@ public class MatematicasActivity extends AppCompatActivity implements View.OnCli
                             Toast.makeText(getApplicationContext(),"La suma es " + (num1+num2), Toast.LENGTH_LONG).show();
                             break;
                         case R.id.rbtmulti:
-                            Toast.makeText(getApplicationContext(),"La suma es " + (num1*num2), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"La multiplicacion es " + (num1*num2), Toast.LENGTH_LONG).show();
                             break;
                         case R.id.rbtpotencia:
-                            Toast.makeText(getApplicationContext(),"La suma es " + Math.pow(num1,num2), Toast.LENGTH_LONG).show();
+                            Toast.makeText(getApplicationContext(),"La potencia es " + Math.pow(num1,num2), Toast.LENGTH_LONG).show();
                             break;
                     }
                    }  catch (Exception ex){

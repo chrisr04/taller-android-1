@@ -82,8 +82,10 @@
                 <EditText
                     android:id="@+id/editTextAmperaje"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/custom_input"
                     android:inputType="number|numberDecimal" />
 
             </LinearLayout>
@@ -138,9 +140,10 @@
                 <EditText
                     android:id="@+id/editTextResistencia1"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_height="30dp"
                     android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/custom_input"
                     android:enabled="false"
                     android:inputType="numberDecimal" />
 
@@ -167,8 +170,10 @@
                 <EditText
                     android:id="@+id/editTextResistencia2"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/custom_input"
                     android:enabled="false"
                     android:inputType="numberDecimal" />
             </LinearLayout>
@@ -196,9 +201,11 @@
                 <EditText
                     android:id="@+id/editTextResistencia3"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="30dp"
                     android:layout_weight="1"
                     android:ems="10"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/custom_input"
                     android:enabled="false"
                     android:inputType="numberDecimal" />
             </LinearLayout>
@@ -256,12 +263,14 @@
             android:id="@+id/btnCalcularVoltaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/button_rounded"
             android:layout_weight="1"
             android:text="@string/calcular" />
 
         <Button
             android:id="@+id/btnBorrarVoltaje"
             android:layout_width="wrap_content"
+            android:background="@drawable/button_rounded"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/borrardatos" />

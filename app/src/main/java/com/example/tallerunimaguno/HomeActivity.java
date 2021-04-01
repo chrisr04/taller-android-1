@@ -20,6 +20,7 @@ import android.widget.Toast;
 public class HomeActivity extends AppCompatActivity implements View.OnClickListener {
 
     Button matematicas;
+    Button texto;
     Button fisica; // A
     ImageButton help, home, logout;
 
@@ -31,12 +32,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         fisica = findViewById(R.id.btnPhysic); // A
         help = findViewById(R.id.btnHelp);
         home = findViewById(R.id.btnHome);
+        texto = findViewById(R.id.btnText);
         logout = findViewById(R.id.btnLogout);
         matematicas.setOnClickListener(this);
         fisica.setOnClickListener(this); // A
         help.setOnClickListener(this);
         home.setOnClickListener(this);
         logout.setOnClickListener(this);
+        texto.setOnClickListener(this);
     }
 
     @Override
@@ -44,19 +47,6 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_home,menu);
         return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-
-        switch(item.getItemId()){
-            case R.id.mnugeometria:
-            //    Toast.makeText(getApplicationContext(), "MENU GEOMETRIA", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(getApplicationContext(), GeometriaActivity.class);
-                startActivity(i);
-                break;
-        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -75,6 +65,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnHelp:
                 showHelpAlert();
+                break;
+            case R.id.btnText:
+                Intent k = new Intent(getApplicationContext(),TextActivity.class);
+                startActivity(k);
                 break;
         }
     }

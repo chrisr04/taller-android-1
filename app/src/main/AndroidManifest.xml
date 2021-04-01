@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TallerUnimagUno">
-        <activity android:name=".VoltajeActivity"></activity>
+        <activity android:name=".TextActivity"></activity>
+        <activity android:name=".VoltajeActivity" />
         <activity android:name=".FuerzaActivity" />
         <activity android:name=".VelocidadActivity" />
         <activity android:name=".FisicaActivity" />

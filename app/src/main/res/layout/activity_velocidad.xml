@@ -82,8 +82,11 @@
             <EditText
                 android:id="@+id/editTextDistancia"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:ems="10"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:inputType="number|numberDecimal" />
 
             <LinearLayout
@@ -96,20 +99,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:layout_marginTop="10dp"
                     android:text="@string/tiempo" />
 
                 <TextView
                     android:id="@+id/textView23"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:text=":" />
             </LinearLayout>
 
             <EditText
                 android:id="@+id/editTextTiempo"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:ems="10"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/custom_input"
                 android:inputType="number|numberDecimal" />
 
             <LinearLayout
@@ -145,6 +153,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_rounded"
             android:text="@string/calcular" />
 
         <Button
@@ -152,6 +161,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:background="@drawable/button_rounded"
             android:text="@string/borrardatos" />
     </LinearLayout>
 
