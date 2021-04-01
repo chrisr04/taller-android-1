@@ -22,6 +22,7 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     Button matematicas;
     Button geometria;
     Button fisica; // A
+    Button texto;
     ImageButton help, home, logout;
 
     @Override
@@ -31,12 +32,14 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
         matematicas = findViewById(R.id.btnMath);
         fisica = findViewById(R.id.btnPhysic); // A
         geometria = findViewById(R.id.btnGeometry);
+        texto = findViewById(R.id.btnText);
         help = findViewById(R.id.btnHelp);
         home = findViewById(R.id.btnHome);
         logout = findViewById(R.id.btnLogout);
         matematicas.setOnClickListener(this);
         fisica.setOnClickListener(this); // A
         geometria.setOnClickListener(this);
+        texto.setOnClickListener(this);
         help.setOnClickListener(this);
         home.setOnClickListener(this);
         logout.setOnClickListener(this);
@@ -63,6 +66,10 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnGeometry:
                 Intent k = new Intent(getApplicationContext(),GeometriaActivity.class);
                 startActivity(k);
+                break;
+            case R.id.btnText:
+                Intent l = new Intent(getApplicationContext(),TextActivity.class);
+                startActivity(l);
                 break;
             case R.id.btnLogout:
                 confirmLogout();
